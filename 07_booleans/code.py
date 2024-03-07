@@ -14,3 +14,6 @@ abroad = ["Rolf", "Bob"]
 
 print(friends == abroad)  # True
 print(friends is abroad)  # False
+print(friends is friends)  # True
+
+# `is` keyword checks if two lists are exactly the same thing (probably meaning they are the same piece of memory allocated by python, not checking elements inside)

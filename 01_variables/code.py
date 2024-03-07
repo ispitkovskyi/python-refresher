@@ -12,7 +12,7 @@ print(result)
 # -- Strings --
 
 name = "Rolf"
-name = "Rolf"
+name = 'Rolf'
 
 print(name)
 print(name * 2)
@@ -34,3 +34,9 @@ b = 17
 
 print(a)
 print(b)
+
+var1 = 1
+var2 = 1
+num1 = 8
+num2 = 2
+print(num1 * num2)
