@@ -13,6 +13,7 @@ for student, attendance in student_attendance.items():
 # -- Another example --
 
 people = [("Bob", 42, "Mechanic"), ("James", 24, "Artist"), ("Harry", 32, "Lecturer")]
+# people = [("Bob", 42), ("James", "Artist"), ("Harry", 32, "Lecturer")] - PROBLEM, the tuples don't contain enough values to distructure them for 3 variables: name, age, profession
 
 for name, age, profession in people:
     print(f"Name: {name}, Age: {age}, Profession: {profession}")
@@ -33,11 +34,19 @@ print(name, profession)  # Bob Mechanic
 
 
 # -- Collecting values --
+print("Collecting values")
 
 head, *tail = [1, 2, 3, 4, 5]
 
 print(head)  # 1
 print(tail)  # [2, 3, 4, 5]
+
+
+head, *tail, end = [1, 2, 3, 4, 5]
+
+print(head)  # 1
+print(tail)  # [2, 3, 4]
+print(end)  # 5
 
 
 *head, tail = [1, 2, 3, 4, 5]
