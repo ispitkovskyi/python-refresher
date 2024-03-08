@@ -11,6 +11,8 @@ add(y=3)  # Error, missing x
 # def add(x=5, y):  # Not OK, default parameters must go after non-default
 #     print(x + y)
 
+
+
 # -- Usually don't use variables as default value --
 
 default_y = 3

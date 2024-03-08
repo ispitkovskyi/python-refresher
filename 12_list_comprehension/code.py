@@ -16,7 +16,7 @@ print(starts_s)
 # -- Can make a new list of friends whose name starts with S --
 
 friends = ["Rolf", "Sam", "Samantha", "Saurabh", "Jen"]
-starts_s = [friend for friend in friends if friend.startswith("S")]
+starts_s = [friend for friend in friends if friend.startswith("S")] # - It creates a NEW list
 
 print(starts_s)
 
@@ -29,3 +29,5 @@ print(friends)
 print(starts_s)
 print(friends is starts_s)
 print("friends: ", id(friends), " starts_s: ", id(starts_s))
+
+# NOTE: 'map' is used more often than list comprehensions to apply some function to each element in the list. See 'lambda functions' section
