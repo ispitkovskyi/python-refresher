@@ -38,6 +38,11 @@ friends = ["Rolf", "Jen", "Bob", "Anne"]
 for friend in friends:
     print(f"{friend} is my friend.")
 
+# -- For loop by element index (list size)
+
+for f_number in range(len(friends)):
+    print(f"{friends[f_number]} is my friend number {f_number}")
+
 # -- For loop 2 -- Average
 
 grades = [35, 67, 98, 100, 100]
