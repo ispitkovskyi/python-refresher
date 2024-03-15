@@ -1,11 +1,15 @@
+# All methods, which use (self,...) as first parameter - are INSTANCE METHODS
+# All methods, which do NOT use 'self" as first parameter - are STATIC METHODS
 class ClassTest:
     def instance_method(self):
         print(f"Called instance_method of {self}")
 
+    # @classmethod annotation is REQUIRED to mark, that method is a class-method
     @classmethod
-    def class_method(cls):
+    def class_method(cls):  #this parameter can have any name, not necessary 'cls'
         print(f"Called class_method of {cls}")
 
+    # @staticmethod annotation is REQUIRED to mark, that method is a static-method
     @staticmethod
     def static_method():
         print(f"Called static_method. We don't get any object or class info here.")
@@ -14,7 +18,7 @@ class ClassTest:
 instance = ClassTest()
 instance.instance_method()
 
-ClassTest.class_method()
+ClassTest.class_method()  # This same as ClassTest.class_method(ClassTest)
 ClassTest.static_method()
 
 # -- What are they used for? --

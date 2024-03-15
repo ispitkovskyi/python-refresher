@@ -11,16 +11,19 @@ print(average(student["grades"]))
 # print(student.average()) ?
 
 
+# IMPORTANT: the '__init__' method is used to CREATE INSTANCE of a class
 class Student:
+    # When instance of the class is created, python automatically calls __init__ and creates and empty "self"
+    # The "self" - is actually an object of Student, so you can operate with created instance inside the class code
     def __init__(self):
-        self.name = "Rolf"
+        self.name = "Rolf"  # AUTOMATICALLY creates 'name' inside 'self' here and assign "Rolf" value to it
         self.grades = (89, 90, 93, 78, 90)
 
     def average(self):
         return sum(self.grades) / len(self.grades)
 
 
-student = Student()
+student = Student() # Here python returns 'self' of the created Student instance
 print(student.average())
 # Identical to Student.average(student)
 

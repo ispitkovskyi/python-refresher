@@ -10,6 +10,7 @@ print(bob)  # Not the nicest thing to read!
 # -- __str__ --
 # The goal of __str__ is to return a nice, easy to read string for end users.
 
+# IgorS: looks like __str__ is similar to toString() in Java
 
 class Person:
     def __init__(self, name, age):
