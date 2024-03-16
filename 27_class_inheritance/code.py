@@ -5,7 +5,7 @@ class Device:
         self.connected = True
 
     def __str__(self):
-        return f"Device {self.name!r} ({self.connected_by})"
+        return f"Device {self.name!r} ({self.connected_by})"  # !r - means that value will be surrounded with quotes, like 'value' in the resulting string
 
     def disconnect(self):
         self.connected = False
@@ -29,12 +29,12 @@ class Printer(Device):
 
     def print(self, pages):
         if not self.connected:
-            raise TypeError("Device is disconnected at this time, cannot print.")
+            raise TypeError(f"Device {self.name} is disconnected at this time, cannot print.")
         print(f"Printing {pages} pages.")
         self.remaining_pages -= pages
 
 
-printer = Printer("Printer", "USB", 500)
+printer = Printer("Printer HP", "USB", 500)
 printer.print(20)
 print(printer)
 printer.print(50)

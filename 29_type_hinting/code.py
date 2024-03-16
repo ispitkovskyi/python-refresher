@@ -1,4 +1,4 @@
-def list_avg(sequence: list) -> float:
+def list_avg(sequence: list) -> float:    # means that list_avg accepts argument of 'list' type and returns value of 'float' type
     return sum(sequence) / len(sequence)
 
 
@@ -47,7 +47,7 @@ class Book:
         return f"<Book {self.name}, {self.book_type}, weighing {self.weight}g>"
 
     @classmethod
-    def hardcover(cls, name: str, page_weight: int) -> "Book":
+    def hardcover(cls, name: str, page_weight: int) -> "Book":  # cannot use just Book, need to use double quotas "Book", because the method is inside the SAME class - Book
         return cls(name, cls.TYPES[0], page_weight + 100)
 
     @classmethod
