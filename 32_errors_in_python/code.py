@@ -38,7 +38,7 @@ try:
 except ZeroDivisionError:
     print("There are no grades yet in your list.")
 else:
-    print(f"The average was {average}")
+    print(f"The average was {average}")     # Runs only if "try" block succeeded.
 
 
 # -- Doing something no matter what --
@@ -51,7 +51,7 @@ students = [
     {"name": "Rolf", "grades": []},
     {"name": "Jen", "grades": [100, 90]},
 ]
-
+print("----------- students grade calculation --------------")
 try:
     for student in students:
         name = student["name"]

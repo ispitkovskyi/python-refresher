@@ -21,6 +21,8 @@ python101.read(50)  # Whaaaat
 # -- Errors used to prevent things from happening --
 
 
+# In most cases it's enough to create an error class with a new name, without anything inside
+# But, you can add content to an error class, if you want
 class TooManyPagesReadError(ValueError):
     pass
 
@@ -47,6 +49,7 @@ class Book:
 
 python101 = Book("Python 101", 50)
 python101.read(35)
-python101.read(
-    50
-)  # This now raises an error, which has a helpful name and a helpful error message.
+try:
+    python101.read(50)  # This now raises an error, which has a helpful name and a helpful error message.
+except TooManyPagesReadError as err:
+    print(err)
