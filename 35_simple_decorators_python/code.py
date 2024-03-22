@@ -49,8 +49,7 @@ print(get_admin_password())  # Error!
 def get_admin_password():
     return "1234"
 
-
-def make_secure(func):
+def make_secure(func):  # This is a DECORATOR
     def secure_function():
         if user["access_level"] == "admin":
             return func()
