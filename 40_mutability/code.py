@@ -32,17 +32,19 @@ print(id(b))  # Different from id(a)
 a = 8597
 b = 8597
 
+print("IDs of integer variables:")
 print(id(a))
 print(id(b))  # Same one
 
 a = 8598
 
+print("IDs of integer variables after value of 'a' was changed")
 print(id(a))
-print(
-    id(b)
-)  # Different, because we didn't change 8597. We just used the name 'a' for a different value. 'b' still is a name for 8597.
+print(id(b))  # Different, because we didn't change 8597. We just used the name 'a' for a different value. 'b' still is a name for 8597.
+print("")
 
-# Most things are mutable in Python. If you want to keep one of your classes immutable, don't add any methods that change the objects' properties.
+# Most things are mutable in Python (NOTE: except tuples, strings, integers, floats and booleans). 
+# If you want to keep one of your classes immutable, don't add any methods that change the objects' properties.
 
 # Tuples and strings are the only fundamental collection in Python which is immutable.
 # Lists, sets, dictionaries are all mutable.
@@ -55,6 +57,7 @@ print(
 a = "hello"
 b = a
 
+print("IDs of string variables")
 print(id(a))
 print(id(b))
 
