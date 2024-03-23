@@ -27,7 +27,9 @@ def get_password(panel):
 # But now we've coupled our function to our decorator. We can't decorate a different function, which isn't great!
 # Instead we could take unlimited parameters and pass whatever we get down to the original function
 
-
+# NOTE: What is USUALLY done with decorators - is make them take UNLIMITED number of arguments and keyword-arguments
+# in this way, decorator DOES NOT CARE of what arguments are passed it, 
+# you just need to make sure that passed arguments fit the WRAPPED function
 def make_secure(func):
     @functools.wraps(func)
     def secure_function(*args, **kwargs):
