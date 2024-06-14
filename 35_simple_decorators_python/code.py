@@ -52,17 +52,15 @@ def get_admin_password():
 def make_secure(func):  # This is a DECORATOR
     def secure_function():
         if user["access_level"] == "admin":
-            return func()
+            return func() #Decorated function returns (if condition is met) a CALL of the func() function. If condition is not met - nothing happens
 
     return secure_function
 
 
-get_admin_password = make_secure(
-    get_admin_password
-)  # `get_admin_password` is now `secure_func` from above
+get_admin_password = make_secure(get_admin_password)  # `get_admin_password` is now `secure_func` from above
 
 user = {"username": "jose", "access_level": "guest"}
-print(get_admin_password())  # Now we check access level
+print(get_admin_password())  # Now, the new "get_admin_password" function is DECORATED, and it checks access level
 
 user = {"username": "bob", "access_level": "admin"}
 print(get_admin_password())  # Now we check access level
@@ -74,8 +72,8 @@ def get_admin_password():
     return "1234"
 
 
-def make_secure(func):
-    def secure_function():
+def make_secure(func):     # This IS a DECORATOR function
+    def secure_function():  # This is NOT a decorator function. It is a function, which REPLACES the decorated one
         if user["access_level"] == "admin":
             return func()
         else:
